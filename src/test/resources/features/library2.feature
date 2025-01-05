@@ -1,4 +1,4 @@
-
+@smoke @regression
 Feature: As a user, I want to search for a specific user by their name or email address using
   the get_user_by_id/{id} endpoint so that I can quickly find the information I need.
 

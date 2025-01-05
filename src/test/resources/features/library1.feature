@@ -1,4 +1,4 @@
-
+@smoke @regression
 Feature: As a librarian,I want to retrieve all users from the library2.cydeo.com API endpoint so that I can display them in my application.
 
   Scenario: Retrieve all users from the API endpoint

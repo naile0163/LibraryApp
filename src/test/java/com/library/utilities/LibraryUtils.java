@@ -79,7 +79,7 @@ public class LibraryUtils {
         String description=faker.book().genre();//added genre to describe what type of book it is
 
         bookMap.put("name", name);
-        bookMap.put("isbn", isbn);
+        bookMap.put("isbn","N.A"+ isbn);
         bookMap.put("year", year);
         bookMap.put("author", author);
         bookMap.put("book_category_id", book_category_id);
