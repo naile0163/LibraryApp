@@ -14,6 +14,9 @@ import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import java.util.*;
+
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.*;
 
 
@@ -55,7 +58,7 @@ public class LibrarianStepDefs {
     @Then("{string} field should not be null")
     public void field_should_not_be_null(String path) {
         assertNotNull(jsonPath.getString(path));
-        //thenPart.assertThat().body(path,is(notNullValue()));
+        thenPart.assertThat().body(path,is(notNullValue()));
     }
 
     String pathParam;
@@ -113,6 +116,7 @@ public class LibrarianStepDefs {
     @And("the field value for {string} path should be equal to {string}")
     public void theFieldValueForPathShouldBeEqualTo(String expectedPath, String expectedValue) {
         assertEquals(expectedValue,jsonPath.getString(expectedPath));
+        System.out.println("jsonPath.getString(\"user_id\") = " + jsonPath.getString("user_id"));
     }
 
     LoginPage loginPage = new LoginPage();
